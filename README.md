@@ -2,12 +2,14 @@ These are various hacked-up projects that use the pipe-
 fifo LED protocol as part of arcan >= 0.5.2.
 
 # Subprojects
+
   g810 - GPLv3, see README.md and LICENSE file. Adds support
 	       for reading protocol controls via stdin.
 
   arduino - arduino project and makefiles for programming an
-	          arduino device to use the protocol over serial or
-						i2c in order to control PWM adafruit neopixel- LEDs.
+	    arduino device to use the protocol over a serial or
+            i2c connection in order to control PWM adafruit
+	    neopixel- LEDs.
 
 # Setup/Use
 
@@ -19,6 +21,7 @@ fifos can be configured via:
 and so on.
     
 to tell arcan about the presence of the LED devices (scanned on startup):
+
     arcan_db add_appl_kv arcan ext_led /path/to/fifo
     arcan_db add_appl_kv arcan ext_led_2 /path/to/fifo2
 
