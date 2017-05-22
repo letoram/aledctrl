@@ -11,6 +11,9 @@ fifo LED protocol as part of arcan >= 0.5.2.
             i2c connection in order to control PWM adafruit
 	    neopixel- LEDs.
 
+	testgen - simple stress-test to randomly flash lights,
+	          make and run like ./test | g810-led --aled -
+
 # Setup/Use
 
 fifos can be configured via:
@@ -19,7 +22,7 @@ fifos can be configured via:
     mkfifo /path/to/fifo2
 
 and so on.
-    
+
 to tell arcan about the presence of the LED devices (scanned on startup):
 
     arcan_db add_appl_kv arcan ext_led /path/to/fifo
